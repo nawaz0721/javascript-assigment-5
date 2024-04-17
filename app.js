@@ -60,8 +60,15 @@ for(i = 0; i < colorNames.length; i++){
 
 //Given the array prices = [25, 30, 15, 10, 50], use a for loop to find and print the index of the highest price
 console.log("Question number 8");
-//prices = [25, 30, 15, 10, 50];
-console.log(" '-----??-----' ");
+var prices = [25, 30, 15, 10, 50];
+var highestPricesIndex = 0;   
+
+for(i = 0; i < prices.length ; i++){
+    if(prices[i] > highestPricesIndex){
+        highestPricesIndex = i;
+    }
+}
+console.log("Index of the highest price is: " + highestPricesIndex);
 
 //Using the array words = ["cat", "dog", "elephant", "giraffe", "lion"], use a for loop to create a new array called pluralWords containing the plural form of each word.
 console.log("Question number 9");
@@ -84,8 +91,61 @@ console.log(fruit);
 
 //Given the array temperatures = [72, 78, 82, 88, 95], use a for loop to find and print the number of days with temperatures above 80.
 console.log("Question number 11");
-//temperatures = [72, 78, 82, 88, 95]
-console.log(" '-----??-----' ");
+var temperatures = [72, 78, 82, 88, 95];
+console.log(temperatures);
+var temp = []
 
-//
+for(i = 0; i < temperatures.length; i++){
+    if(temperatures[i] > 80){
+        temp.push(temperatures[i]);
+    }
+}
+console.log("Number of days with temperatures above 80 is " + temp.length);
+
+//Given the array numbers = [5, 10, 15, 20, 25], use the splice method to insert the number 12 between 10 and 15
 console.log("Question number 12");
+numbers = [5, 10, 15, 20, 25]
+console.log(numbers);
+numbers.splice(2,0,12);
+console.log(numbers);
+
+//Create an array called words with different words. Use a for loop and the splice method to remove words that contain more than five letters.
+console.log("Question number 13")
+
+var friend = ['ahmed' , 'ali' , 'shujaat' , 'rameez']
+
+for(var i = 0; i < friend.length; i++){
+    if(friend[i].length < 5 ){
+        friend.splice(i,1)
+    }
+}
+console.log(friend);
+
+//Using the array numbers = [5, 10, 15, 20, 25], use the splice method and prompt to insert a number at an index provided by the user.
+console.log("Question number 14");
+
+num = [5, 10, 15, 20, 25];
+console.log(num);
+
+//var index = +prompt("Enter the index where you want number");
+//var number = + prompt("Enter the number you want to add array");
+
+index = 2;
+number = 55;
+
+num.splice(index , 0 , number);
+console.log(num);
+
+//Using the array values = [5, 10, 15, 20, 25], ask the user to enter a number. Use a for loop and the slice method to create a new array containing only the values less than the user's input.
+console.log("Question number 15");
+
+values = [5, 10, 15, 20, 25];
+var numb = + prompt("Enter  the number");
+newValues = [];
+
+for(i = 0 ; i < values.length; i++){
+    if(values[i] < numb){
+        newValues.push(values[i])
+    }
+}
+console.log(newValues);
